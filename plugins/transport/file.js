@@ -176,7 +176,7 @@ const uploadToHost = (host, file) => new Promise((resolve, reject) => {
                 case 'Uguu':
                     requestOptions.url = servemedia.uguuApiUrl || servemedia.UguuApiUrl; // 原配置文件以大写字母开头
                     requestOptions.formData = {
-                        file: {
+                        'files[]': {
                             value: pendingFile,
                             options: {
                                 filename: name,
